@@ -77,11 +77,46 @@ public class QRGEncoder {
 
     private void encodeQRCodeContents(String data, Bundle bundle, String type) {
         switch (type) {
+            case QRGContents.Type.WIFI:
+                if (data != null && data.length() > 0) {
+                    contents = data;
+                    displayContents = data;
+                    title = "WiFi";
+                }
+                break;
+            case QRGContents.Type.URL:
+                if (data != null && data.length() > 0) {
+                    contents = data;
+                    displayContents = data;
+                    title = "URL";
+                }
+                break;
+            case QRGContents.Type.PRODUCT:
+                if (data != null && data.length() > 0) {
+                    contents = data;
+                    displayContents = data;
+                    title = "Product";
+                }
+                break;
             case QRGContents.Type.TEXT:
                 if (data != null && data.length() > 0) {
                     contents = data;
                     displayContents = data;
                     title = "Text";
+                }
+                break;
+            case QRGContents.Type.CALENDAR:
+                if (data != null && data.length() > 0) {
+                    contents = data;
+                    displayContents = data;
+                    title = "Calendar";
+                }
+                break;
+            case QRGContents.Type.LICENSE:
+                if (data != null && data.length() > 0) {
+                    contents = data;
+                    displayContents = data;
+                    title = "License";
                 }
                 break;
             case QRGContents.Type.EMAIL:
@@ -204,6 +239,20 @@ public class QRGEncoder {
                         displayContents = latitude + "," + longitude;
                         title = "Location";
                     }
+                }
+                break;
+            case QRGContents.Type.ISBN:
+                if (data != null && data.length() > 0) {
+                    contents = data;
+                    displayContents = data;
+                    title = "ISBN";
+                }
+                break;
+            case QRGContents.Type.UNKNOWN:
+                if (data != null && data.length() > 0) {
+                    contents = data;
+                    displayContents = data;
+                    title = "Unknown";
                 }
                 break;
         }

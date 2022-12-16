@@ -12,9 +12,19 @@ public class QRGContents {
 
     public static final class Type {
 
+        public static final String WIFI = "WIFI_TYPE";
+
+        public static final String URL = "URL_TYPE";
+
+        public static final String PRODUCT = "PRODUCT_TYPE";
+
         // Plain text. Use Intent.putExtra(DATA, string). This can be used for URLs too, but string
         // must include "http://" or "https://".
         public static final String TEXT = "TEXT_TYPE";
+
+        public static final String CALENDAR = "CALEEDAR_TYPE";
+
+        public static final String LICENSE = "LICENSE_TYPE";
 
         // An email type. Use Intent.putExtra(DATA, string) where string is the email address.
         public static final String EMAIL = "EMAIL_TYPE";
@@ -28,6 +38,10 @@ public class QRGContents {
         public static final String CONTACT = "CONTACT_TYPE";
 
         public static final String LOCATION = "LOCATION_TYPE";
+
+        public static final String ISBN = "ISBN_TYPE";
+
+        public static final String UNKNOWN = "UNKNOWN_TYPE";
     }
 
     // When using Type.CONTACT, these arrays provide the keys for adding or retrieving multiple
